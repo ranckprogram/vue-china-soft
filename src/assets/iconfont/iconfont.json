@@ -1,0 +1,79 @@
+{
+  "id": "1748401",
+  "name": "su-soft",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "苏总-课程及考试管理系统",
+  "glyphs": [
+    {
+      "icon_id": "14120837",
+      "name": "play",
+      "font_class": "bofang201",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "14120653",
+      "name": "home",
+      "font_class": "home",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "7674919",
+      "name": "成功",
+      "font_class": "xiaoxi-chenggong",
+      "unicode": "e71b",
+      "unicode_decimal": 59163
+    },
+    {
+      "icon_id": "7239953",
+      "name": "wechat",
+      "font_class": "wechat",
+      "unicode": "e763",
+      "unicode_decimal": 59235
+    },
+    {
+      "icon_id": "2743004",
+      "name": "饼状图",
+      "font_class": "pie-chart",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "4136030",
+      "name": "图表 折线图",
+      "font_class": "performance",
+      "unicode": "e60e",
+      "unicode_decimal": 58894
+    },
+    {
+      "icon_id": "4583748",
+      "name": "面积图",
+      "font_class": "mianjitu",
+      "unicode": "e613",
+      "unicode_decimal": 58899
+    },
+    {
+      "icon_id": "5192783",
+      "name": "条形图",
+      "font_class": "tiaoxingtu",
+      "unicode": "e60d",
+      "unicode_decimal": 58893
+    },
+    {
+      "icon_id": "7101331",
+      "name": "散点图",
+      "font_class": "scatter",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "13233560",
+      "name": "柱形图",
+      "font_class": "zhuxingtu",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    }
+  ]
+}
