@@ -45,7 +45,7 @@ export default {
   },
   computed: {
     showPhoneLoginBtn() {
-      return true;
+      return this.current === "form-login";
     },
     showFormLoginBtn() {
       return this.current !== "form-login";
