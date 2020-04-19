@@ -3,7 +3,7 @@
     <header class="wrapper">
       <el-row>
         <el-col :span="6">
-          <img src="@/assets/images/logo.png" alt class="logo" />
+          <img src="@/assets/images/home-logo.png" alt class="logo" />
         </el-col>
         <el-col :span="12">
           <el-menu
@@ -111,7 +111,7 @@ export default {
     display: block;
     width: 180px;
     height: 24px;
-    margin: 18px 0;
+    margin: 18px 0 1px -20px;
   }
 
   .el-menu {
@@ -152,6 +152,5 @@ export default {
       background: inherit;
     }
   }
-
 }
 </style>

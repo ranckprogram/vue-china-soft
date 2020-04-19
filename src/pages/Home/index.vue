@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-    <home-header />
     <banner />
     <category-section title="安全学习" url>
       <el-row :gutter="30">
@@ -30,23 +29,18 @@
         </el-col>
       </el-row>
     </category-section>
-    <home-footer />
   </div>
 </template>
 <script>
-import HomeHeader from "./modules/HomeHeader";
 import Banner from "./modules/Banner";
 import CategorySection from "./modules/CategorySection";
 import CardItem from "./modules/CardItem";
-import HomeFooter from "./modules/HomeFooter";
 
 export default {
   components: {
-    "home-header": HomeHeader,
     banner: Banner,
     "category-section": CategorySection,
     "card-item": CardItem,
-    "home-footer": HomeFooter
   },
   data() {
     return {
