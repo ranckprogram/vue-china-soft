@@ -3,7 +3,9 @@
     <header class="wrapper">
       <el-row>
         <el-col :span="6">
-          <img src="@/assets/images/home-logo.png" alt class="logo" />
+          <router-link to="/home">
+            <img src="@/assets/images/home-logo.png" alt class="logo" />
+          </router-link>
         </el-col>
         <el-col :span="12">
           <el-menu
@@ -56,7 +58,7 @@ export default {
   data() {
     return {
       isLogin: true,
-      currentMenu: "",
+      currentMenu: "dealCenter",
       accountMenu: [
         {
           id: 0,
@@ -94,6 +96,7 @@ export default {
   methods: {
     handleSelect(menu) {
       console.log(menu);
+      this.$router.push({ name: "HomeList", query: { menu } });
     },
     handleClickAccountMenu(command) {
       console.log(command);
@@ -137,6 +140,10 @@ export default {
         background: inherit !important;
       }
     }
+  }
+
+  .el-menu--horizontal>.el-menu-item.is-active {
+    border-color: #fff;
   }
 
   .btn-box {

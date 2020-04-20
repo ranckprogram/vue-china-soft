@@ -81,6 +81,7 @@ export default {
   methods: {
     handleClickCard(id, card) {
       console.log(id, card);
+      this.$router.push({name: "HomeInfo"})
     }
   }
 };
