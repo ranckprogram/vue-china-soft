@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/Login'
+import Reset from '@/Pages/Login/Reset'
+import Register from '@/pages/Login/Register'
 
 import HomeLayout from '@/pages/Home/Layout'
 import HomePage from '@/pages/Home'
@@ -32,11 +34,19 @@ export default new Router({
       },
     ]
   },
-
   {
     path: '/login',
     name: 'login',
     component: Login
+  }, {
+    path: '/register',
+    name: 'register',
+    component: Register
+  },
+  {
+    path: '/reset',
+    name: 'reset',
+    component: Reset
   }
   ]
 })

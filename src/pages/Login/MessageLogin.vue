@@ -1,21 +1,15 @@
 <template>
   <div class="form-login">
-    <h1>登录</h1>
+    <h1>验证码登录</h1>
     <el-form :model="form" status-icon :rules="rules" ref="ruleForm" class="login-form">
       <el-form-item prop="username">
         <el-input v-model="form.username" placeholder="请输入手机号码" autocomplete="off"></el-input>
       </el-form-item>
       <el-form-item prop="password">
-        <el-input type="password" v-model="form.password" placeholder="请输入密码" autocomplete="off"></el-input>
+        <el-input placeholder="请输入验证码" v-model="form.code">
+          <template slot="append">获取验证码</template>
+        </el-input>
       </el-form-item>
-      <el-row class="tip">
-        <el-col :span="12">
-          <el-button type="text" class="forget" @click="$router.push({path: '/reset'})">忘记密码</el-button>
-        </el-col>
-        <el-col :span="12">
-          <el-button type="text" class="register" @click="$router.push({path: '/register'})">快速注册</el-button>
-        </el-col>
-      </el-row>
       <el-form-item>
         <el-button type="primary" @click="handleLogin('ruleForm')" class="btn-login">登录</el-button>
       </el-form-item>

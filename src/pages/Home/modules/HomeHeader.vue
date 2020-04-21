@@ -36,15 +36,25 @@
                   <el-button plain round size="small" icon="el-icon-s-custom">账户</el-button>
                 </span>
                 <el-dropdown-menu slot="dropdown">
-                  <el-dropdown-item v-for="item in accountMenu" :key="item.id">
+                  <el-dropdown-item
+                    v-for="item in accountMenu"
+                    :key="item.id"
+                    :command="item.command"
+                  >
                     <div style="min-width: 155px">{{item.title}}</div>
                   </el-dropdown-item>
                 </el-dropdown-menu>
               </el-dropdown>
             </template>
             <template v-else>
-              <el-button plain round size="small" class="btn-login">登录</el-button>
-              <el-button plain round size="small">快速注册</el-button>
+              <el-button
+                plain
+                round
+                size="small"
+                class="btn-login"
+                @click="$router.push({name: 'login'})"
+              >登录</el-button>
+              <el-button plain round size="small" @click="$router.push({name: 'register'})">快速注册</el-button>
             </template>
           </div>
         </el-col>
@@ -100,6 +110,13 @@ export default {
     },
     handleClickAccountMenu(command) {
       console.log(command);
+      switch (command) {
+        case "logout":
+          this.isLogin = false;
+
+          // this.$router.push({ name: "login" });
+          break;
+      }
     }
   }
 };

@@ -3,7 +3,9 @@
     <section class="wrapper">
       <el-carousel trigger="click" height="400px" style="width:100%" class="banner-content">
         <el-carousel-item v-for="item in 4" :key="item">
-          <img src="@/assets/images/banner.jpg" alt />
+          <route-link to="/">
+            <img src="@/assets/images/banner.jpg" alt />
+          </route-link>
         </el-carousel-item>
       </el-carousel>
     </section>
