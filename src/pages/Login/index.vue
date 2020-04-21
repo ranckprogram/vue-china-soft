@@ -20,7 +20,6 @@
         </el-button>
       </div>
     </div>
-    <footer class="footer">成都高新科技提供技术服务支持</footer>
   </layout>
 </template>  
 
