@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+em {
+  font-style: normal;
+}
+
 .btn-block {
   display: block;
   width: 100%;

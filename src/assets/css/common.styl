@@ -45,3 +45,44 @@
     }
   }
 }
+
+
+
+// user
+
+.user {
+  .line-menu {
+    background: $primaryColor;
+
+    .el-menu {
+      background: $primaryColor;
+    }
+
+    .el-menu-item {
+      color: #fff;
+      opacity: 0.8;
+
+      &.is-active, &:hover {
+        color: #fff !important;
+        background: inherit !important;
+        opacity: 1;
+      }
+    }
+
+    .el-submenu {
+      .el-submenu__title {
+        color: #fff !important;
+
+        &.is-active, &:hover {
+          background: inherit !important;
+        }
+      }
+    }
+
+    &.el-menu--horizontal>.el-menu-item.is-active {
+      border-color: #fff;
+    }
+  }
+
+
+}

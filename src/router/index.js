@@ -11,6 +11,10 @@ import HomeInfo from '@/pages/Home/Info'
 
 
 import UserLayout from '@/pages/User/Layout';
+import UserCourse from '@/pages/User/Course';
+import UserExam from '@/pages/User/Exam';
+import UserInfo from '@/pages/User/Info';
+import UserMessage from '@/pages/User/Message';
 
 
 Vue.use(Router)
@@ -55,6 +59,25 @@ export default new Router({
   }, {
     path: '/user',
     component: UserLayout,
+    children: [
+      {
+        path: '/user/course',
+        name: 'UserCourse',
+        component: UserCourse
+      }, {
+        path: '/user/exam',
+        name: 'UserExam',
+        component: UserExam
+      }, {
+        path: '/user/info',
+        name: 'HomeInfo',
+        component: HomeInfo
+      },{
+        path: '/user/message',
+        name: 'UserMessage',
+        component: UserMessage
+      },
+    ]
   }
   ]
 })
