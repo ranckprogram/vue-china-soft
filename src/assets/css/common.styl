@@ -1,0 +1,47 @@
+/*由于项目采用前后端分离开发，
+且对接为后端对接，
+如果在对接对接后产生样式微调整，
+代码合并方面就会有影响，
+因此采用额外css作为样式微调的统一处理*/
+
+#app .login-layout {
+  background-size: 100% 55.55%;
+  .logo {
+    margin-bottom: 50px
+  }
+  .login-content {
+    margin-top: 7%;
+  }
+  .footer {
+    bottom: 6%
+  }
+}
+.home-page {
+  .home-header .logo {
+    height: 36px;
+    margin-top: 12px;
+    margin-bottom: 12px
+  }
+  .home-header .el-menu-item {
+    color: #fff;
+    opacity: .8;
+  }
+  .el-submenu__icon-arrow {
+    display: none;
+  }
+  .home-footer {
+    font-size: 14px;
+  }
+
+  .home {
+    .category {
+      &:nth-child(even) {
+        box-shadow: 0px 0px 8px 0px #E9E9E9;
+      }
+
+      &:nth-child(odd) {
+        background-color: #F8FAFC;
+      }
+    }
+  }
+}

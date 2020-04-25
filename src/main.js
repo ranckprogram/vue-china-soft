@@ -9,6 +9,7 @@ import 'element-ui/lib/theme-chalk/index.css'
 
 import './assets/iconfont/iconfont'
 import './assets/css/style.css'
+import './assets/css/common.styl'
 
 
 Vue.use(ElementUI)

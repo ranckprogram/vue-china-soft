@@ -8,6 +8,11 @@ import HomeLayout from '@/pages/Home/Layout'
 import HomePage from '@/pages/Home'
 import HomeList from '@/pages/Home/List'
 import HomeInfo from '@/pages/Home/Info'
+
+
+import UserLayout from '@/pages/User/Layout';
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -47,6 +52,9 @@ export default new Router({
     path: '/reset',
     name: 'reset',
     component: Reset
+  }, {
+    path: '/user',
+    component: UserLayout,
   }
   ]
 })

@@ -130,8 +130,8 @@ export default {
   .logo {
     display: block;
     width: 180px;
-    height: 24px;
-    margin: 18px 0 1px -20px;
+    height: 36px;
+    margin: 12px 0 12px -20px;
   }
 
   .el-menu {

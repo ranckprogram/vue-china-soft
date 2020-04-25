@@ -90,11 +90,11 @@ export default {
 <style lang="stylus">
 .home {
   .category {
-    &:nth-child(odd) {
+    &:nth-child(even) {
       box-shadow: 0px 0px 8px 0px #E9E9E9;
     }
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       background-color: #F8FAFC;
     }
   }

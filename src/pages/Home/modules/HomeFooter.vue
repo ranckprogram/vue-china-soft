@@ -15,6 +15,7 @@ export default {};
 .home-footer {
   height: 60px;
   line-height: 60px;
+  font-size: 14px;
   color: #fff;
   background: $primaryColor;
 
