@@ -5,7 +5,7 @@
       <el-tab-pane label="正在学习" name="continue"></el-tab-pane>
       <el-tab-pane label="已经完成" name="restart"></el-tab-pane>
     </el-tabs>
-    <course-card v-for="item in courseList" v-bind="item" :key="item.id" />
+    <course-card v-for="item in courseList" v-bind="item" :key="item.id" @on-enter="handleGoStudy"/>
   </div>
 </template>
 
@@ -64,6 +64,10 @@ export default {
   methods: {
     handleClickTab() {
       
+    },
+
+    handleGoStudy () {
+      this.$router.push({name: "UserCourseDetail"})
     }
   }
 };

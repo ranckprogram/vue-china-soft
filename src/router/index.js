@@ -12,6 +12,7 @@ import HomeInfo from '@/pages/Home/Info'
 
 import UserLayout from '@/pages/User/Layout';
 import UserCourse from '@/pages/User/Course';
+import UserCourseDetail from '@/pages/User/Course/Detail';
 import UserExam from '@/pages/User/Exam';
 import UserInfo from '@/pages/User/Info';
 import UserMessage from '@/pages/User/Message';
@@ -64,7 +65,12 @@ export default new Router({
         path: '/user/course',
         name: 'UserCourse',
         component: UserCourse
-      }, {
+      }, 
+      {
+        path: '/user/course/detail',
+        name: 'UserCourseDetail',
+        component: UserCourseDetail
+      },{
         path: '/user/exam',
         name: 'UserExam',
         component: UserExam

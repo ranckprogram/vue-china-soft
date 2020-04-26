@@ -14,6 +14,7 @@
           type="primary"
           size="medium"
           v-if="status === 'begin'"
+          @click="$emit('on-enter')"
         >开始学习</el-button>
         <el-button
           style="float: right;margin-top: -8px"
