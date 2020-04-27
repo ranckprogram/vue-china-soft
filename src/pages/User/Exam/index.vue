@@ -131,7 +131,7 @@ export default {
   },
   methods: {
     handleClickTab(tab) {
-      console.log(tab);
+      console.log(tab.name);
     },
     handleJoin() {
       console.log("join");

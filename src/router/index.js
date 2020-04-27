@@ -16,6 +16,7 @@ import UserCourseDetail from '@/pages/User/Course/Detail';
 import UserExam from '@/pages/User/Exam';
 import UserInfo from '@/pages/User/Info';
 import UserMessage from '@/pages/User/Message';
+import UserMessageDetail from '@/pages/User/Message/Detail';
 
 
 Vue.use(Router)
@@ -82,6 +83,11 @@ export default new Router({
         path: '/user/message',
         name: 'UserMessage',
         component: UserMessage
+      },
+      {
+        path: '/user/message/:id',
+        name: 'UserMessageDetail',
+        component: UserMessageDetail
       },
     ]
   }

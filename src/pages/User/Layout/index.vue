@@ -15,6 +15,27 @@
         <el-menu-item index="4">安全检查</el-menu-item>
         <el-menu-item index="5">处理中心</el-menu-item>
       </el-menu>
+      <div class="user-admin">
+        <el-badge :value="12" class="item">
+          <el-button
+            plain
+            round
+            size="small"
+            icon="el-icon-message-solid"
+            @click="$router.push({name: 'UserMessage'})"
+          >消息</el-button>
+        </el-badge>
+        <el-dropdown style="margin-left: 20px" @command="handleClickAccountMenu">
+          <span class="el-dropdown-link">
+            <el-button plain round size="small" icon="el-icon-s-custom">账户</el-button>
+          </span>
+          <el-dropdown-menu slot="dropdown">
+            <el-dropdown-item v-for="item in accountMenu" :key="item.id" :command="item.command">
+              <div style="min-width: 155px">{{item.title}}</div>
+            </el-dropdown-item>
+          </el-dropdown-menu>
+        </el-dropdown>
+      </div>
     </el-header>
     <el-container>
       <el-aside width="240px" class="layout-menu">
@@ -49,6 +70,38 @@
 <script>
 export default {
   data() {
+    this.accountMenu = [
+      {
+        id: 0,
+        title: "我的课程",
+        url: "javascript:;",
+        command: "course"
+      },
+      {
+        id: 1,
+        title: "我的考试",
+        url: "javascript:;",
+        command: "exam"
+      },
+      {
+        id: 2,
+        title: "修改个人信息",
+        url: "javascript:;",
+        command: "changeInfo"
+      },
+      {
+        id: 3,
+        title: "切换管理后台",
+        url: "javascript:;",
+        command: "changeAdmin"
+      },
+      {
+        id: 4,
+        title: "退出当前账号",
+        url: "javascript:;",
+        command: "logout"
+      }
+    ];
     return {
       activeIndex: "1",
       activeMenu: "/user/course"
@@ -62,7 +115,8 @@ export default {
     handleSelectMenu(e) {
       this.activeMenu = e;
       this.$router.push({ path: e });
-    }
+    },
+    handleClickAccountMenu() {}
   }
 };
 </script>
@@ -79,6 +133,11 @@ export default {
 
   .line-menu {
     display: inline-block;
+  }
+
+  .user-admin {
+    float: right;
+    padding: 12px 0;
   }
 }
 
