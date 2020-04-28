@@ -116,7 +116,12 @@ export default {
       this.activeMenu = e;
       this.$router.push({ path: e });
     },
-    handleClickAccountMenu() {}
+    handleClickAccountMenu(menu) {
+      console.log(menu);
+      if (menu === "changeInfo") {
+        this.$router.push({ name: "UserInfo" });
+      }
+    }
   }
 };
 </script>

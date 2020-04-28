@@ -77,8 +77,8 @@ export default new Router({
         component: UserExam
       }, {
         path: '/user/info',
-        name: 'HomeInfo',
-        component: HomeInfo
+        name: 'UserInfo',
+        component: UserInfo
       },{
         path: '/user/message',
         name: 'UserMessage',
