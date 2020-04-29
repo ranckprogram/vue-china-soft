@@ -14,6 +14,7 @@ import UserLayout from '@/pages/User/Layout';
 import UserCourse from '@/pages/User/Course';
 import UserCourseDetail from '@/pages/User/Course/Detail';
 import UserExam from '@/pages/User/Exam';
+import UserExamPaper from '@/pages/User/Exam/Paper'
 import UserInfo from '@/pages/User/Info';
 import UserMessage from '@/pages/User/Message';
 import UserMessageDetail from '@/pages/User/Message/Detail';
@@ -75,6 +76,10 @@ export default new Router({
         path: '/user/exam',
         name: 'UserExam',
         component: UserExam
+      } ,{
+        path: '/user/exam/:id',
+        name: 'UserExamPaper',
+        component: UserExamPaper
       }, {
         path: '/user/info',
         name: 'UserInfo',
