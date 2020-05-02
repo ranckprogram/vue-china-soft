@@ -24,11 +24,11 @@
       </el-form>
     </el-card>
 
-    <el-dialog :title="modelConfig[type].title" :visible.sync="dialogVisible" width="720px" :before-close="handleClose">
+    <el-dialog :title="modelConfig[type].title" :visible.sync="dialogVisible" width="720px">
       <el-form label-width="130px" style="width: 440px">
         <el-form-item label="修改性别" v-if="modelConfig[type].type === 'sex'">
           <el-radio v-model="sex" label="1">男</el-radio>
-          <el-radio v-model="radio" label="2">女</el-radio>
+          <el-radio v-model="sex" label="2">女</el-radio>
         </el-form-item>
 
         <el-form-item label="修改出生日期" v-if="modelConfig[type].type === 'birth'">

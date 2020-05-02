@@ -133,8 +133,17 @@ export default {
     handleClickTab(tab) {
       console.log(tab.name);
     },
-    handleJoin() {
-      console.log("join");
+    handleJoin(index, row) {
+      console.log("join", index, row);
+      this.$router.push({
+        name: "UserExamPaper",
+        params: {
+          id: 1
+        },
+        query: {
+          status: row.status
+        }
+      });
     },
     handleSizeChange() {},
     handleCurrentChange() {}
