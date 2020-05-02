@@ -29,7 +29,13 @@
           <div class="btn-box">
             <template v-if="isLogin">
               <el-badge :value="12" class="item">
-                <el-button plain round size="small" icon="el-icon-message-solid">消息</el-button>
+                <el-button
+                  plain
+                  round
+                  size="small"
+                  icon="el-icon-message-solid"
+                  @click="$router.push({name: 'UserMessage'})"
+                >消息</el-button>
               </el-badge>
               <el-dropdown style="margin-left: 20px" @command="handleClickAccountMenu">
                 <span class="el-dropdown-link">
@@ -113,8 +119,15 @@ export default {
       switch (command) {
         case "logout":
           this.isLogin = false;
-
-          // this.$router.push({ name: "login" });
+          break;
+        case "course":
+          this.$router.push({ name: "UserCourse" });
+          break;
+        case "exam":
+          this.$router.push({ name: "UserExam" });
+          break;
+        case "changeInfo":
+          this.$router.push({ name: "UserInfo" });
           break;
       }
     }

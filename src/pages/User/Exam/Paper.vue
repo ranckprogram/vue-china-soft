@@ -221,8 +221,25 @@
         <div class="btn-box">
           <el-button type="primary" @click="handleSubmit">提交</el-button>
         </div>
+        <aside class="paper-aside">
+          <div>
+            <em>90分钟</em>
+            <span>考试时间</span>
+          </div>
+          <div>
+            <em>100分</em>
+            <span>考试分值</span>
+          </div>
+          <div>
+            <em>80分</em>
+            <span>我的成绩</span>
+          </div>
+          <div>
+            <b>待评分</b>
+            <span>我的成绩</span>
+          </div>
+        </aside>
       </section>
-      <aside></aside>
     </main>
   </div>
 </template>
@@ -677,6 +694,10 @@ export default {
     }
   }
 
+  section {
+    position: relative;
+  }
+
   .question-type {
     margin-bottom: 20px;
 
@@ -795,6 +816,47 @@ export default {
     .el-button {
       width: 300px;
     }
+  }
+}
+
+.paper-aside {
+  position: absolute;
+  top: 0;
+  right: -106px;
+  width: 100px;
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(235, 238, 245, 1);
+  border-radius: 5px;
+  padding: 0 20px;
+
+  div {
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+
+    &+div {
+      border-top: 1px solid #EBEEF5;
+    }
+  }
+
+  em {
+    display: block;
+    font-size: 16px;
+    color: #409EFF;
+    margin-bottom: 14px;
+  }
+
+  span {
+    font-size: 14px;
+    color: #999;
+  }
+
+  b {
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    color: #E6A23C;
+    margin-bottom: 14px;
   }
 }
 </style>
