@@ -22,6 +22,7 @@ import UserMessageDetail from '@/pages/User/Message/Detail';
 
 import AdminLayout from '@/pages/Admin/Layout';
 import AdminStatis from '@/pages/Admin/Statis';
+import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
 
 Vue.use(Router)
@@ -109,7 +110,11 @@ export default new Router({
       name: 'AdminStatis',
       component: AdminStatis
     },
-    
+    {
+      path: '/admin/statis/line',
+      name: 'AdminStatisLine',
+      component: AdminStatisLine
+    },
   ]
 }
   ]
