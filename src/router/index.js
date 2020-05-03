@@ -20,6 +20,10 @@ import UserMessage from '@/pages/User/Message';
 import UserMessageDetail from '@/pages/User/Message/Detail';
 
 
+import AdminLayout from '@/pages/Admin/Layout';
+import AdminStatis from '@/pages/Admin/Statis';
+
+
 Vue.use(Router)
 
 export default new Router({
@@ -67,16 +71,16 @@ export default new Router({
         path: '/user/course',
         name: 'UserCourse',
         component: UserCourse
-      }, 
+      },
       {
         path: '/user/course/detail',
         name: 'UserCourseDetail',
         component: UserCourseDetail
-      },{
+      }, {
         path: '/user/exam',
         name: 'UserExam',
         component: UserExam
-      } ,{
+      }, {
         path: '/user/exam/:id',
         name: 'UserExamPaper',
         component: UserExamPaper
@@ -84,7 +88,7 @@ export default new Router({
         path: '/user/info',
         name: 'UserInfo',
         component: UserInfo
-      },{
+      }, {
         path: '/user/message',
         name: 'UserMessage',
         component: UserMessage
@@ -95,6 +99,18 @@ export default new Router({
         component: UserMessageDetail
       },
     ]
-  }
+  },
+  {
+    path: '/admin',
+    component: AdminLayout,
+    children: [
+      {
+      path: '/admin/statis',
+      name: 'AdminStatis',
+      component: AdminStatis
+    },
+    
+  ]
+}
   ]
 })
