@@ -21,6 +21,8 @@ import UserMessageDetail from '@/pages/User/Message/Detail';
 
 
 import AdminLayout from '@/pages/Admin/Layout';
+import AdminCourse from '@/pages/Admin/Course';
+
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -106,16 +108,21 @@ export default new Router({
     component: AdminLayout,
     children: [
       {
-      path: '/admin/statis',
-      name: 'AdminStatis',
-      component: AdminStatis
-    },
-    {
-      path: '/admin/statis/line',
-      name: 'AdminStatisLine',
-      component: AdminStatisLine
-    },
-  ]
-}
+        path: '/admin/course',
+        name: 'AdminCourse',
+        component: AdminCourse
+      },
+      {
+        path: '/admin/statis',
+        name: 'AdminStatis',
+        component: AdminStatis
+      },
+      {
+        path: '/admin/statis/line',
+        name: 'AdminStatisLine',
+        component: AdminStatisLine
+      },
+    ]
+  }
   ]
 })

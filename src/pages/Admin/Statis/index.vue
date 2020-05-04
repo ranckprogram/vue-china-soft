@@ -3,7 +3,7 @@
     <section>
       <h1>课程统计</h1>
       <ul>
-        <li>
+        <li @click="$router.push({name: 'AdminStatisLine'})">
           <el-card>
             <figure>
               <div class="box-icon">
@@ -134,6 +134,7 @@ export default {};
     width: 320px;
     margin-right: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
   }
 
   figure {
