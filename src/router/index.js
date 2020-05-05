@@ -22,6 +22,7 @@ import UserMessageDetail from '@/pages/User/Message/Detail';
 
 import AdminLayout from '@/pages/Admin/Layout';
 import AdminCourse from '@/pages/Admin/Course';
+import AdminCourseCreate from '@/pages/Admin/Course/Create';
 
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
@@ -111,6 +112,10 @@ export default new Router({
         path: '/admin/course',
         name: 'AdminCourse',
         component: AdminCourse
+      }, {
+        path: '/admin/course/create',
+        name: 'AdminCourseCreate',
+        component: AdminCourseCreate
       },
       {
         path: '/admin/statis',

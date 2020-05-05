@@ -1,11 +1,11 @@
 <template>
   <div class="search-bar">
     <div class="search-deal">
-      <el-input placeholder="请输入课程标题"/>
+      <el-input placeholder="请输入课程标题" />
       <el-button type="primary" icon="el-icon-search">搜索</el-button>
       <el-button icon="el-icon-search" @click="drawer =true">高级</el-button>
     </div>
-    <el-button type="primary">新增课程</el-button>
+    <el-button type="primary" @click="$router.push({name: 'AdminCourseCreate'})">新增课程</el-button>
     <el-drawer title="高级搜索" :visible.sync="drawer" size="670px">
       <el-form
         :model="searchParams"
