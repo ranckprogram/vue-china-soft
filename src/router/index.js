@@ -26,6 +26,8 @@ import AdminCourseCreate from '@/pages/Admin/Course/Create';
 import AdminCourseExam from '@/pages/Admin/Course/Exam'
 import AdminCoursePaper from '@/pages/Admin/Course/Paper'
 import AdminCourseLine from '@/pages/Admin/Course/Line'
+import AdminTest from '@/pages/Admin/Test'
+
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -110,6 +112,7 @@ export default new Router({
     path: '/admin',
     component: AdminLayout,
     children: [
+      // 课程
       {
         path: '/admin/course',
         name: 'AdminCourse',
@@ -129,11 +132,24 @@ export default new Router({
         path: '/admin/course/paper',
         name: 'AdminCoursePaper',
         component: AdminCoursePaper
-      }, {
+      },
+      {
         path: '/admin/course/line',
         name: 'AdminCourseLine',
         component: AdminCourseLine
       },
+
+      // 试题test 
+      {
+        path: '/admin/test',
+        name: 'AdminTest',
+        component: AdminTest
+      },
+
+      // 考试exam
+
+
+      // 统计
       {
         path: '/admin/statis',
         name: 'AdminStatis',
