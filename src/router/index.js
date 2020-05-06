@@ -23,7 +23,9 @@ import UserMessageDetail from '@/pages/User/Message/Detail';
 import AdminLayout from '@/pages/Admin/Layout';
 import AdminCourse from '@/pages/Admin/Course';
 import AdminCourseCreate from '@/pages/Admin/Course/Create';
-
+import AdminCourseExam from '@/pages/Admin/Course/Exam'
+import AdminCoursePaper from '@/pages/Admin/Course/Paper'
+import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -112,10 +114,25 @@ export default new Router({
         path: '/admin/course',
         name: 'AdminCourse',
         component: AdminCourse
-      }, {
+      },
+      {
         path: '/admin/course/create',
         name: 'AdminCourseCreate',
         component: AdminCourseCreate
+      },
+      {
+        path: '/admin/course/exam',
+        name: 'AdminCourseExam',
+        component: AdminCourseExam
+      },
+      {
+        path: '/admin/course/paper',
+        name: 'AdminCoursePaper',
+        component: AdminCoursePaper
+      }, {
+        path: '/admin/course/line',
+        name: 'AdminCourseLine',
+        component: AdminCourseLine
       },
       {
         path: '/admin/statis',

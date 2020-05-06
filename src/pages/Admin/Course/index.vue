@@ -165,8 +165,13 @@ export default {
         case "view":
           break;
         case "statis":
+          this.$router.push({ name: "AdminCourseLine" });
           break;
-        case "exam ":
+        case "paper":
+          this.$router.push({ name: "AdminCoursePaper" });
+          break;
+        case "exam":
+          this.$router.push({ name: "AdminCourseExam" });
           break;
       }
     }

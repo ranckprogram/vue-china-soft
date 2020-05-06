@@ -34,6 +34,13 @@
         <modal-upload :show.sync="show" />
       </section>
     </el-card>
+    <el-card class="create-course-footer">
+      <div class="right">
+        <el-button>取消</el-button>
+        <el-button type="primary">确定</el-button>
+      </div>
+      <el-button type="primary" plain>添加章节</el-button>
+    </el-card>
   </div>
 </template>
 
@@ -165,6 +172,16 @@ export default {
     float: left;
     margin-top: -110px;
     margin-left: 170px;
+  }
+}
+
+.create-course-footer {
+  position: sticky;
+  top: 100%;
+  width: 100%;
+
+  .right {
+    float: right;
   }
 }
 </style>
