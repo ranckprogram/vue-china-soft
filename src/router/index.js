@@ -27,6 +27,7 @@ import AdminCourseExam from '@/pages/Admin/Course/Exam'
 import AdminCoursePaper from '@/pages/Admin/Course/Paper'
 import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminTest from '@/pages/Admin/Test'
+import AdminTestCreate from '@/pages/Admin/Test/Create'
 
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
@@ -144,6 +145,11 @@ export default new Router({
         path: '/admin/test',
         name: 'AdminTest',
         component: AdminTest
+      },
+      {
+        path: '/admin/test/create',
+        name: 'AdminTestCreate',
+        component: AdminTestCreate
       },
 
       // 考试exam

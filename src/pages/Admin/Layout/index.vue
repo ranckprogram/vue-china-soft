@@ -48,7 +48,7 @@
               <i class="el-icon-s-order"></i> 试题管理
             </template>
             <el-menu-item index="/admin/test">试题库</el-menu-item>
-            <el-menu-item index="2-2">新建试题</el-menu-item>
+            <el-menu-item index="/admin/test/create">新建试题</el-menu-item>
           </el-submenu>
             <el-submenu index="2">
             <template slot="title">
