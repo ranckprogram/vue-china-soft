@@ -28,7 +28,8 @@ import AdminCoursePaper from '@/pages/Admin/Course/Paper'
 import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminTest from '@/pages/Admin/Test'
 import AdminTestCreate from '@/pages/Admin/Test/Create'
-
+import AdminPaperList from '@/pages/Admin/Exam'
+import AdminExamCreate from '@/pages/Admin/Exam/Create'
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -153,7 +154,16 @@ export default new Router({
       },
 
       // 考试exam
-
+      {
+        path: '/admin/exam/paper',
+        name: 'AdminPaperList',
+        component: AdminPaperList
+      },
+      {
+        path: '/admin/exam/create',
+        name: 'AdminExamCreate',
+        component: AdminExamCreate
+      },
 
       // 统计
       {

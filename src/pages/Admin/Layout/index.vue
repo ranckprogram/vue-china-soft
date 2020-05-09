@@ -54,10 +54,11 @@
             <template slot="title">
               <i class="el-icon-s-claim"></i> 考试管理
             </template>
-            <el-menu-item index="2-1">试卷库</el-menu-item>
-            <el-menu-item index="2-1">新增试卷</el-menu-item>
-            <el-menu-item index="2-1">考试</el-menu-item>
-            <el-menu-item index="2-2">新建考试</el-menu-item>
+            <el-menu-item index="/admin/exam/paper">试卷库</el-menu-item>
+            <el-menu-item index="/admin/exam/paper/create">新增试卷</el-menu-item>
+            <el-menu-item index="/admin/exam">考试</el-menu-item>
+            <el-menu-item index="/admin/exam/create">新建考试</el-menu-item>
+            <el-menu-item index="/admin/exam/approval">考题审批</el-menu-item>
           </el-submenu>
             <el-menu-item index="/admin/statis">
             <i class="el-icon-s-data"></i> 统计分析
