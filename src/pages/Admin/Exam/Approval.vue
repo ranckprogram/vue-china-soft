@@ -129,6 +129,9 @@ export default {
     handleSearch(params) {
       console.log(params);
     },
+    handleClick() {
+      this.$router.push({ name: "ApprovalInfo" });
+    },
     handleSizeChange() {},
     handleCurrentChange() {}
   }

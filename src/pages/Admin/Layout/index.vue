@@ -50,7 +50,7 @@
             <el-menu-item index="/admin/test">试题库</el-menu-item>
             <el-menu-item index="/admin/test/create">新建试题</el-menu-item>
           </el-submenu>
-            <el-submenu index="2">
+            <el-submenu index="3">
             <template slot="title">
               <i class="el-icon-s-claim"></i> 考试管理
             </template>

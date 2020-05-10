@@ -79,6 +79,7 @@ export default {
 <style lang="stylus">
 .approval-info {
   display: flex;
+  margin-top: 30px;
 
   .student-list {
     flex: 1;

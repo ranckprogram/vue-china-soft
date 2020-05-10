@@ -1,5 +1,7 @@
 <template>
   <div class="test-search-bar">
+    <el-button type="primary" style="height: 40px">新建试题</el-button>
+
     <el-form :inline="true" :model="search" class="test-search-form">
       <el-form-item label="题型">
         <el-input v-model="search.type" placeholder="请选择"></el-input>
@@ -19,7 +21,6 @@
       <el-input v-model="search.title" placeholder="请输入试题标题" />
       <el-button type="primary" @click="onSubmit" icon="el-icon-search">查询</el-button>
     </el-form>
-    <el-button type="primary">新建试题</el-button>
   </div>
 </template>
 
@@ -39,9 +40,13 @@ export default {
 </script>
 
 <style lang="stylus">
+.test-search-bar {
+  display: flex;
+}
+
 .test-search-form {
-  float: right;
   text-align: right;
+  margin-left: auto;
 
   .el-form-item__conten, .el-input {
     width: 180px;

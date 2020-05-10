@@ -29,6 +29,7 @@ import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminTest from '@/pages/Admin/Test'
 import AdminTestCreate from '@/pages/Admin/Test/Create'
 import AdminPaperList from '@/pages/Admin/Exam/Paper'
+import AdminExamPaperCreate from '@/pages/Admin/Exam/PaperCreate'
 import AdminExamCreate from '@/pages/Admin/Exam/Create'
 import AdminExamList from '@/pages/Admin/Exam/List'
 import AdminExamViewProcess from '@/pages/Admin/Exam/ViewExamProcess'
@@ -164,6 +165,12 @@ export default new Router({
         name: 'AdminPaperList',
         component: AdminPaperList
       },
+      {
+        path: '/admin/exam/paper/create',
+        name: 'AdminExamPaperCreate',
+        component: AdminExamPaperCreate
+      },
+
       {
         path: '/admin/exam/create',
         name: 'AdminExamCreate',
