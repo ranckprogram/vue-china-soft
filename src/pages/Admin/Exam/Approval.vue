@@ -1,21 +1,29 @@
 <template>
-  <div class="paper-list">
+  <div class="approval">
     <header style="padding: 10px 0 24px">
-      <search-bar :hasStatus="false" @on-search="handleSearch" />
+      <search-bar :hasCreate="false" @on-search="handleSearch" />
     </header>
     <el-card>
       <el-table :data="data" style="width: 100%">
-        <el-table-column prop="name" label="试卷名称"></el-table-column>
+        <el-table-column prop="name" label="考试名称"></el-table-column>
         <el-table-column prop="course" label="课程"></el-table-column>
         <el-table-column prop="chapter" label="章"></el-table-column>
         <el-table-column prop="subsection" label="节"></el-table-column>
         <el-table-column prop="difficulty" label="难度"></el-table-column>
-        <el-table-column prop="time" label="使用次数"></el-table-column>
-        <el-table-column width="220">
+        <el-table-column prop="status" label="状态">
           <template slot-scope="scope">
-            <el-button @click="handleClick(scope.row)" size="small">查看</el-button>
-            <el-button type="primary" plain size="small">编辑</el-button>
-            <el-button type="danger" plain size="small">删除</el-button>
+            <el-tag type="warning" v-if="scope.row.status === 'wait'">待评审</el-tag>
+            <el-tag type="success" v-else>已评审</el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column width="80">
+          <template slot-scope="scope">
+            <el-button
+              @click="handleClick(scope.row)"
+              size="small"
+              v-if="scope.row.status !== 'wait'"
+            >查看</el-button>
+            <el-button type="primary" plain size="small" v-else>评分</el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -52,7 +60,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -62,7 +70,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -72,7 +80,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -82,7 +90,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -92,7 +100,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -102,7 +110,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "wait"
         },
         {
           name: "你是小米吗",
@@ -112,7 +120,7 @@ export default {
           difficulty: "难",
           type: "选择题",
           time: 5,
-          accuracy: "100%"
+          status: "success"
         }
       ]
     };
@@ -128,7 +136,7 @@ export default {
 </script>
 
 <style lang="stylus">
-.paper-list {
+.approval {
   .page {
     padding: 40px 0;
     text-align: right;

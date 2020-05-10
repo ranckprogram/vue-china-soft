@@ -30,6 +30,7 @@ import AdminTest from '@/pages/Admin/Test'
 import AdminTestCreate from '@/pages/Admin/Test/Create'
 import AdminPaperList from '@/pages/Admin/Exam'
 import AdminExamCreate from '@/pages/Admin/Exam/Create'
+import AdminExamApproval from '@/pages/Admin/Exam/Approval'
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -164,6 +165,12 @@ export default new Router({
         name: 'AdminExamCreate',
         component: AdminExamCreate
       },
+      {
+        path: '/admin/exam/approval',
+        name: 'AdminExamApproval',
+        component: AdminExamApproval
+      },
+
 
       // 统计
       {
