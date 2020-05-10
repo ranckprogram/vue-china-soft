@@ -19,7 +19,11 @@
         </el-table-column>
         <el-table-column width="160">
           <template slot-scope="scope">
-            <el-button @click="handleClick(scope.row)" size="small" :disabled="scope.row.status === 'ready'">查看</el-button>
+            <el-button
+              @click="handleClick(scope.row)"
+              size="small"
+              :disabled="scope.row.status === 'ready'"
+            >查看</el-button>
             <el-button plain size="small">考试</el-button>
           </template>
         </el-table-column>
@@ -125,6 +129,15 @@ export default {
   methods: {
     handleSearch(params) {
       console.log(params);
+    },
+
+    handleClick(row) {
+      if (row.status === "process") {
+        this.$router.push({ name: "AdminExamViewProcess", params: { id: 1 } });
+      }
+      if (row.status === "finish") {
+        this.$router.push({ name: "AdminExamViewFinish", params: { id: 1 } });
+      }
     },
     handleSizeChange() {},
     handleCurrentChange() {}

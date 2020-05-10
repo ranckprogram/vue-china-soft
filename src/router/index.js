@@ -31,6 +31,8 @@ import AdminTestCreate from '@/pages/Admin/Test/Create'
 import AdminPaperList from '@/pages/Admin/Exam/Paper'
 import AdminExamCreate from '@/pages/Admin/Exam/Create'
 import AdminExamList from '@/pages/Admin/Exam/List'
+import AdminExamViewProcess from '@/pages/Admin/Exam/ViewExamProcess'
+import AdminExamViewFinish from '@/pages/Admin/Exam/ViewExamFinish'
 import AdminExamApproval from '@/pages/Admin/Exam/Approval'
 import ApprovalInfo from '@/pages/Admin/Exam/ApprovalInfo'
 import AdminStatis from '@/pages/Admin/Statis';
@@ -172,6 +174,17 @@ export default new Router({
         name: 'AdminExamList',
         component: AdminExamList
       },
+      {
+        path: '/admin/exam/process/:id',
+        name: 'AdminExamViewProcess',
+        component: AdminExamViewProcess
+      },
+      {
+        path: '/admin/exam/finish/:id',
+        name: 'AdminExamViewFinish',
+        component: AdminExamViewFinish
+      },
+
       {
         path: '/admin/exam/approval',
         name: 'AdminExamApproval',
