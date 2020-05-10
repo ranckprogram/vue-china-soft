@@ -28,9 +28,10 @@ import AdminCoursePaper from '@/pages/Admin/Course/Paper'
 import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminTest from '@/pages/Admin/Test'
 import AdminTestCreate from '@/pages/Admin/Test/Create'
-import AdminPaperList from '@/pages/Admin/Exam'
+import AdminPaperList from '@/pages/Admin/Exam/Paper'
 import AdminExamCreate from '@/pages/Admin/Exam/Create'
 import AdminExamApproval from '@/pages/Admin/Exam/Approval'
+import ApprovalInfo from '@/pages/Admin/Exam/ApprovalInfo'
 import AdminStatis from '@/pages/Admin/Statis';
 import AdminStatisLine from '@/pages/Admin/Statis/Line';
 
@@ -169,6 +170,10 @@ export default new Router({
         path: '/admin/exam/approval',
         name: 'AdminExamApproval',
         component: AdminExamApproval
+      }, {
+        path: '/admin/exam/approval/info',
+        name: 'ApprovalInfo',
+        component: ApprovalInfo
       },
 
 

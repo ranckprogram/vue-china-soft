@@ -1,5 +1,7 @@
 <template>
   <div class="test-search-bar">
+    <el-button type="primary" v-if="hasCreate" style="height: 40px">新建试题</el-button>
+
     <el-form :inline="true" :model="search" class="test-search-form">
       <el-form-item label="状态" v-if="hasStatus">
         <el-select v-model="search.status" placeholder="请选择">
@@ -22,7 +24,6 @@
       <el-input v-model="search.title" placeholder="请输入试题标题" />
       <el-button type="primary" @click="onSubmit" icon="el-icon-search">查询</el-button>
     </el-form>
-    <el-button type="primary" v-if="hasCreate">新建试题</el-button>
   </div>
 </template>
 
