@@ -56,7 +56,7 @@
             </template>
             <el-menu-item index="/admin/exam/paper">试卷库</el-menu-item>
             <el-menu-item index="/admin/exam/paper/create">新增试卷</el-menu-item>
-            <el-menu-item index="/admin/exam">考试</el-menu-item>
+            <el-menu-item index="/admin/exam/list">考试</el-menu-item>
             <el-menu-item index="/admin/exam/create">新建考试</el-menu-item>
             <el-menu-item index="/admin/exam/approval">考题审批</el-menu-item>
           </el-submenu>
