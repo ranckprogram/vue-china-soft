@@ -23,9 +23,20 @@
     position: sticky;
     top: 0;
     z-index: 20;
+    .el-button {
+      color: $primaryColor;
+      border: none;
+    }
+    .el-badge__content {
+      border: none;
+    }
+    .el-menu.el-menu--horizontal {
+      border: none;
+    }
   }
   .home-header .logo {
     height: 36px;
+    width: auto;
     margin-top: 12px;
     margin-bottom: 12px
   }
@@ -51,13 +62,40 @@
       }
     }
   }
+  .card-item:hover {
+    h3 {
+      color: $primaryColor 
+    }
+  }
+  .category {
+    .el-link.is-underline:hover:after {
+      border: 0
+    }
+  }
 }
 
-
+#app .info .bread {
+  margin-top: 0;
+}
 
 // user
 
 .user {
+  .layout-header {
+    .el-button {
+      color: $primaryColor;
+      border: none;
+    }
+    .el-badge__content {
+      border: none;
+    }
+  }
+ 
+
+  .el-breadcrumb {
+    font-size: 16px;
+  }
+
   .line-menu {
     background: $primaryColor;
 
@@ -91,5 +129,32 @@
     }
   }
 
+  .user-info {
+    .el-icon-edit {
+      font-size: 22px;
+    }
+  }
 
+  .exam {
+    td .el-form-item {
+      margin-bottom: 0;
+    }
+  }
+.user-content {
+  .paper {
+    .btn-box {
+      padding-top: 30px;
+      .el-button {
+        height: 48px;
+        line-height: 24px;
+      }
+    }
+  }
+}
+  .paper-aside {
+    position: fixed;
+    top: 140px;
+    left: 50%;
+    margin-left: 600px;
+  }
 }
