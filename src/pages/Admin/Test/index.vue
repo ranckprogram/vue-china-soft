@@ -1,7 +1,7 @@
 <template>
   <div class="test">
     <header style="padding: 10px 0 24px">
-      <search-bar @on-search="handleSearch" />
+      <search-bar @on-search="handleSearch" @on-click-create="handleeClickCreate"/>
     </header>
     <el-card>
       <el-table :data="data" style="width: 100%">
@@ -160,6 +160,9 @@ export default {
     };
   },
   methods: {
+    handleeClickCreate() {
+      this.$emit('on-click-create')
+    },
     handleSearch(query) {
       console.log(query);
     },

@@ -1,6 +1,6 @@
 <template>
   <div class="test-search-bar">
-    <el-button type="primary" style="height: 40px">新建试题</el-button>
+    <el-button type="primary" style="height: 40px" @click="$emit('on-click-create')">新建试题</el-button>
 
     <el-form :inline="true" :model="search" class="test-search-form">
       <el-form-item label="题型">

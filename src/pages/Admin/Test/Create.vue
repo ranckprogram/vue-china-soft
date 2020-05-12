@@ -117,7 +117,7 @@
         </el-form-item>
       </el-form>
     </el-card>
-    <el-card style="text-align: right">
+    <el-card style="text-align: right" class="test-create-footer">
       <el-button>取消</el-button>
       <el-button type="primary">确定</el-button>
     </el-card>

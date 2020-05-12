@@ -48,7 +48,7 @@
               <em>3</em>
               <span>分数</span>
               <em>30</em>
-              <el-button type="primary" plain size="medium">添加试题</el-button>
+              <el-button type="primary" plain size="medium" @click="hanldeAddQuestion">添加试题</el-button>
               <el-button plain size="medium">上移</el-button>
               <el-button plain size="medium">下移</el-button>
               <el-button type="danger" plain size="medium">删除题型</el-button>
@@ -222,13 +222,47 @@
         <li>问答1题 20分</li>
       </ul>
     </el-card>
+    <el-dialog title="选择试题" :visible.sync="dialogVisible" width="1400px" :before-close="handleClose">
+      <test-list @on-click-create="handleClickCreate"></test-list>
+      <span slot="footer" class="dialog-footer">
+        <el-button @click="dialogVisible = false">取 消</el-button>
+        <el-button type="primary" @click="dialogVisible = false">确 定</el-button>
+      </span>
+    </el-dialog>
+
+    <el-drawer
+      class="drawer"
+      size="50%"
+      :visible.sync="drawer"
+      :with-header="false">
+        <header>创建试题</header>
+        <section>
+          <test-create/>
+        </section>
+        <footer>
+          <el-button type="primary" plain>添加选项</el-button>
+          <div class="right">
+            <el-button  plain>取消</el-button>
+            <el-button type="primary" >确定</el-button>
+          </div>
+
+        </footer>
+    </el-drawer>
   </div>
 </template>
 
 <script>
+import TestList from "../Test"; // 根据路由或者传入props值判断区分处理,如果觉得太绕，可以直接copy一份在当前目录下，重新命名
+import TestCreate from "../Test/Create"; 
 export default {
+  components: {
+    "test-list": TestList,
+    "test-create": TestCreate
+  },
   data() {
     return {
+      dialogVisible: false,
+      drawer:false,
       form: {},
       item: {
         show: false
@@ -238,6 +272,13 @@ export default {
   methods: {
     handleOpen() {
       this.item.show = !this.item.show;
+    },
+    hanldeAddQuestion() {
+      this.dialogVisible = true;
+    },
+    handleClickCreate () {
+      console.log(11)
+      this.drawer = true
     }
   }
 };
@@ -268,7 +309,6 @@ export default {
       padding: 40px 20px;
       border-top: 1px solid #EBEEF5;
       margin-top: 50px;
-      
 
       .paper-info-footer-right {
         margin-left: auto;
@@ -373,5 +413,35 @@ export default {
       }
     }
   }
+ 
 }
+
+ .drawer {
+   header {
+     position: relative;
+     z-index: 10;
+     background: #fff;
+     font-size: 18px;
+     color: #666;
+     padding: 20px;
+   }
+   section {
+    overflow: hidden;
+
+    .test-create-footer {
+      display:none;
+    }
+   }
+  footer {
+      display: flex;
+      box-shadow: 0px 0px 12px 0px rgba(238,238,238,1);
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      padding: 36px 20px;
+      .right {
+        margin-left: auto;
+      }
+    }
+  }
 </style>
