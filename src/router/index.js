@@ -25,6 +25,7 @@ import AdminCourse from '@/pages/Admin/Course';
 import AdminCourseCreate from '@/pages/Admin/Course/Create';
 import AdminCourseExam from '@/pages/Admin/Course/Exam'
 import AdminCoursePaper from '@/pages/Admin/Course/Paper'
+import AdminCoursePaperView from '@/pages/Admin/Course/View'
 import AdminCourseLine from '@/pages/Admin/Course/Line'
 import AdminTest from '@/pages/Admin/Test'
 import AdminTestCreate from '@/pages/Admin/Test/Create'
@@ -141,6 +142,12 @@ export default new Router({
         name: 'AdminCoursePaper',
         component: AdminCoursePaper
       },
+      {
+        path: '/admin/course/paper/:id',
+        name: 'AdminCoursePaperView',
+        component: AdminCoursePaperView
+      },
+      
       {
         path: '/admin/course/line',
         name: 'AdminCourseLine',

@@ -163,6 +163,10 @@ export default {
         case "edit":
           break;
         case "view":
+          this.$router.push({
+            name: "AdminCoursePaperView",
+            params: { id: 1 }
+          });
           break;
         case "statis":
           this.$router.push({ name: "AdminCourseLine" });
