@@ -6,7 +6,7 @@
         <el-input v-model="title" size="mini" placeholder="请输入章节名称" style="width: 260px" />
       </template>
       <template slot-scope="scope">
-        <el-input v-model="scope.row.name" placeholder="请输入小节名称" />
+        <el-input v-model="scope.row.name" placeholder="请输入小节名称" style="width: 320px" />
       </template>
     </el-table-column>
     <el-table-column align="right">

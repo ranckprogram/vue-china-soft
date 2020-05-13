@@ -59,8 +59,10 @@
               <h3>
                 在生产管理信息系统中，下列操作步骤能正确将工单推进流程的是？
                 <span @click="handleOpen">
-                  展开
-                  <i :class="item.show ?'el-icon-arrow-down':'el-icon-arrow-up'"></i>
+                  {{!item.show? "展开": "收起"}}
+                  <i
+                    :class="!item.show ?'el-icon-arrow-down':'el-icon-arrow-up'"
+                  ></i>
                 </span>
               </h3>
 
@@ -143,7 +145,7 @@
                 在生产管理信息系统中，下列操作步骤能正确将工单推进流程的是？
                 <span @click="handleOpen">
                   展开
-                  <i :class="item.show ?'el-icon-arrow-down':'el-icon-arrow-up'"></i>
+                  <i :class="!item.show ? 'el-icon-arrow-down':'el-icon-arrow-up'"></i>
                 </span>
               </h3>
 
@@ -222,7 +224,12 @@
         <li>问答1题 20分</li>
       </ul>
     </el-card>
-    <el-dialog title="选择试题" :visible.sync="dialogVisible" width="1400px" :before-close="handleClose">
+    <el-dialog
+      title="选择试题"
+      :visible.sync="dialogVisible"
+      width="1400px"
+      :before-close="handleClose"
+    >
       <test-list @on-click-create="handleClickCreate"></test-list>
       <span slot="footer" class="dialog-footer">
         <el-button @click="dialogVisible = false">取 消</el-button>
@@ -230,30 +237,25 @@
       </span>
     </el-dialog>
 
-    <el-drawer
-      class="drawer"
-      size="50%"
-      :visible.sync="drawer"
-      :with-header="false">
-        <header>创建试题</header>
-        <section>
-          <test-create/>
-        </section>
-        <footer>
-          <el-button type="primary" plain>添加选项</el-button>
-          <div class="right">
-            <el-button  plain>取消</el-button>
-            <el-button type="primary" >确定</el-button>
-          </div>
-
-        </footer>
+    <el-drawer class="drawer" size="840" :visible.sync="drawer" :with-header="false">
+      <header>创建试题</header>
+      <section>
+        <test-create />
+      </section>
+      <footer>
+        <el-button type="primary" plain>添加选项</el-button>
+        <div class="right">
+          <el-button plain>取消</el-button>
+          <el-button type="primary">确定</el-button>
+        </div>
+      </footer>
     </el-drawer>
   </div>
 </template>
 
 <script>
 import TestList from "../Test"; // 根据路由或者传入props值判断区分处理,如果觉得太绕，可以直接copy一份在当前目录下，重新命名
-import TestCreate from "../Test/Create"; 
+import TestCreate from "../Test/Create";
 export default {
   components: {
     "test-list": TestList,
@@ -262,7 +264,7 @@ export default {
   data() {
     return {
       dialogVisible: false,
-      drawer:false,
+      drawer: false,
       form: {},
       item: {
         show: false
@@ -276,9 +278,9 @@ export default {
     hanldeAddQuestion() {
       this.dialogVisible = true;
     },
-    handleClickCreate () {
-      console.log(11)
-      this.drawer = true
+    handleClickCreate() {
+      console.log(11);
+      this.drawer = true;
     }
   }
 };
@@ -405,6 +407,11 @@ export default {
             line-height: 28px;
             height: 28px;
           }
+
+          .el-input-number__decrease, .el-input-number__increase {
+            height: 25px;
+            width: 28px;
+          }
         }
 
         .operate {
@@ -413,35 +420,37 @@ export default {
       }
     }
   }
- 
 }
 
- .drawer {
-   header {
-     position: relative;
-     z-index: 10;
-     background: #fff;
-     font-size: 18px;
-     color: #666;
-     padding: 20px;
-   }
-   section {
-    overflow: hidden;
+.drawer {
+  header {
+    position: relative;
+    z-index: 10;
+    background: #fff;
+    font-size: 18px;
+    color: #666;
+    padding: 20px;
+  }
 
+  section {
     .test-create-footer {
-      display:none;
-    }
-   }
-  footer {
-      display: flex;
-      box-shadow: 0px 0px 12px 0px rgba(238,238,238,1);
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 36px 20px;
-      .right {
-        margin-left: auto;
-      }
+      display: none;
     }
   }
+
+  footer {
+    display: flex;
+    box-shadow: 0px 0px 12px 0px rgba(238, 238, 238, 1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 10;
+    background: #fff;
+
+    .right {
+      margin-left: auto;
+    }
+  }
+}
 </style>

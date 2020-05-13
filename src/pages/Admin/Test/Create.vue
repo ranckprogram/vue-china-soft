@@ -118,6 +118,7 @@
       </el-form>
     </el-card>
     <el-card style="text-align: right" class="test-create-footer">
+      <el-button type="primary" plain style="float: left">添加选项</el-button>
       <el-button>取消</el-button>
       <el-button type="primary">确定</el-button>
     </el-card>

@@ -7,9 +7,7 @@
       {{title}}
       <span>({{score}}分)</span>
     </h3>
-    <div class="answer">
-      {{answer}}
-    </div>
+    <div class="answer">{{answer}}</div>
     <div class="grade">
       分值
       <el-input-number v-model="grade" size="mini" style="margin-left: 10px"></el-input-number>
@@ -91,6 +89,21 @@ export default {
     text-align: right;
     font-size: 14px;
     color: #666;
+
+    .input-number {
+      margin-left: 10px;
+      line-height: 28px;
+
+      .el-input__inner {
+        line-height: 28px;
+        height: 28px;
+      }
+
+      .el-input-number__decrease, .el-input-number__increase {
+        height: 25px;
+        width: 28px;
+      }
+    }
   }
 }
 </style>

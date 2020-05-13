@@ -40,12 +40,14 @@
         </li>
       </ul>
 
-      <div class="table-head">参加考试人员</div>
+      <div style="border: 1px solid #EBEEF5">
+        <div class="table-head">参加考试人员</div>
       <div class="table-conent">
         <el-table :data="data" style="width: 100">
           <el-table-column prop="number" label="编号"></el-table-column>
           <el-table-column prop="name" label="姓名" width="120"></el-table-column>
         </el-table>
+      </div>
       </div>
     </el-card>
   </div>
