@@ -227,7 +227,7 @@
     <el-dialog
       title="选择试题"
       :visible.sync="dialogVisible"
-      width="1400px"
+      width="1360px"
       :before-close="handleClose"
     >
       <test-list @on-click-create="handleClickCreate"></test-list>
