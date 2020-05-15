@@ -12,8 +12,8 @@
         <el-table-column prop="difficulty" label="难度"></el-table-column>
         <el-table-column prop="status" label="状态">
           <template slot-scope="scope">
-            <el-tag type="warning" v-if="scope.row.status === 'wait'">待评审</el-tag>
-            <el-tag type="success" v-else>已评审</el-tag>
+            <span style="color: #E6A23C" v-if="scope.row.status === 'wait'">待评审</span>
+            <span style="color: #67c23a" v-else>已评审</span>
           </template>
         </el-table-column>
         <el-table-column width="80">

@@ -2,17 +2,17 @@
   <div class="course-detail">
     <div class="menu">
       <ul>
-        <li>
+        <li @click="$router.push({path: '/user/course'})">
           <router-link to="/user/course">
             <i class="el-icon-s-home"></i>
           </router-link>
         </li>
-        <li>
+        <li @click="showList = !showList">
           <i class="el-icon-s-fold"></i>
         </li>
       </ul>
     </div>
-    <div class="list">
+    <div class="list" v-if="showList">
       <section>
         <h3>第1章 使用科学方法提升工作效率</h3>
         <ul>
@@ -49,6 +49,7 @@ export default {
   data() {
     return {
       active: 3,
+      showList: true,
       list: [
         {
           id: 1,

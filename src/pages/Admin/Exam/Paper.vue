@@ -14,7 +14,7 @@
         <el-table-column width="220">
           <template slot-scope="scope">
             <el-button @click="handleClick(scope.row)" size="small">查看</el-button>
-            <el-button type="primary" plain size="small">编辑</el-button>
+            <el-button @click="$router.push({name: 'AdminExamPaperEdit'})" type="primary" plain size="small">编辑</el-button>
             <el-button type="danger" plain size="small">删除</el-button>
           </template>
         </el-table-column>
